@@ -3,6 +3,18 @@ pilA =["ambatukam","pico","wuhan","pp"]
 pilB = ["acumalaka","japanis gobolin","amogus"]
 pilC = ["osas","kodok","cicak"]
 
+def imenu1(md, inama):
+    if md == 1:
+        pilA.insert(len(pilA), inama)
+        print(" <<berhasil menambahkan peserta <"+inama+"> ke dalam data survey")
+    elif md == 2:
+        pilB.insert(len(pilB), inama)
+        print(" <<berhasil menambahkan peserta <"+inama+"> ke dalam data survey")
+    elif md == 3:
+        pilC.insert(len(pilC), inama)
+        print(" <<berhasil menambahkan peserta <"+inama+"> ke dalam survey")
+    else:
+        return print(" <<Pilihan ini tidak tersedia")
 
 
 
