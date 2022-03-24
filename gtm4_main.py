@@ -15,6 +15,16 @@ def imenu1(md, inama):
         print(" <<berhasil menambahkan peserta <"+inama+"> ke dalam survey")
     else:
         return print(" <<Pilihan ini tidak tersedia")
+def imenu2(n):
+    print(" >Memilih pro Rusia ("+str(len(pilA))+" pendukung)")
+    for n in range (len(pilA)):
+        print("  "+str(n+1), pilA[n])
+    print(" >Memilih pro Ukraina ("+str(len(pilB))+" pendukung)")
+    for n in range (len(pilB)):
+        print(f"  "+str(n+1), pilB[n])
+    print(" >Netral ("+str(len(pilC))+" pendukung)")
+    for n in range (len(pilC)):
+        print("  "+str(n+1), pilC[n])
 
 
 
