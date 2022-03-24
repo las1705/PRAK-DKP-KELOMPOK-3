@@ -25,6 +25,15 @@ def imenu2(n):
     print(" >Netral ("+str(len(pilC))+" pendukung)")
     for n in range (len(pilC)):
         print("  "+str(n+1), pilC[n])
+def imenu3():
+    t = len(pilA) + len(pilB) + len(pilC)
+    pa = 100 * len(pilA) / t 
+    pb = 100 * len(pilB) / t 
+    pc = 100 * len(pilC) / t 
+    ipa = int(pa)
+    ipb = int(pb)
+    ipc = int(pc)
+    return print("   Terdata perserta survey adalah "+str(t)+" orang\n   1. Pendukung Rusia "+str(ipa)+"%\n   2. pendukung Ukraina "+str(ipb)+"%\n   3. Netral "+str(ipc)+"%")
 
 
 
