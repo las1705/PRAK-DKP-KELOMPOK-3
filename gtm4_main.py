@@ -3,6 +3,7 @@ pilA =["ambatukam","pico","wuhan","pp"]
 pilB = ["acumalaka","japanis gobolin","amogus"]
 pilC = ["osas","kodok","cicak"]
 
+# fungsi untuk menambahkan data peserta survey
 def imenu1(md, inama):
     if md == 1:
         pilA.insert(len(pilA), inama)
@@ -15,6 +16,8 @@ def imenu1(md, inama):
         print(" <<berhasil menambahkan peserta <"+inama+"> ke dalam survey")
     else:
         return print(" <<Pilihan ini tidak tersedia")
+    
+ # fungsi untuk menampilkan data peserta yang telah malakukan survey  
 def imenu2(n):
     print(" >Memilih pro Rusia ("+str(len(pilA))+" pendukung)")
     for n in range (len(pilA)):
@@ -25,6 +28,8 @@ def imenu2(n):
     print(" >Netral ("+str(len(pilC))+" pendukung)")
     for n in range (len(pilC)):
         print("  "+str(n+1), pilC[n])
+ 
+# fungsi untuk menampilkan persentase dari data seurvey
 def imenu3():
     t = len(pilA) + len(pilB) + len(pilC)
     pa = 100 * len(pilA) / t 
@@ -36,30 +41,27 @@ def imenu3():
     return print("   Terdata perserta survey adalah "+str(t)+" orang\n   1. Pendukung Rusia "+str(ipa)+"%\n   2. pendukung Ukraina "+str(ipb)+"%\n   3. Netral "+str(ipc)+"%")
 
 
-
-
-
-
-
-
-
-
-
-
-
 # progam utama
 while True:
-    print("\n\n=========Survey=========")
-    print(">menu:")
+    print("\n\n=========SURVEY=========")
+    print("-<({[MENU]})>-:")
     print("A. menambah data survey\nB. menampilkan data\nC. melihat persentase")
     imenu = input(">pilih huruf angka dari pilihan menu: ")
     print("")
 
     if imenu == 'a' or imenu == 'A':
-        print("--Menambah Data Survey--")
+        print("---Menambah Data Survey---")
+        inama = input(" >masukkan nama anda: ")
+        print(" >pilihan untuk didukung:")
+        print("  1. Pilih pro Rusia\n  2. Pilih pro Ukaraina\n  3. Pilih pro")
+        md = int(input(" <masukkan nomor angka: "))
+        imenu1(md, inama) 
     elif imenu == 'b' or imenu == 'B':
-        print("--List Data Survey--")       
+        print("---List Data Survey---") 
+        imenu2(0)
     elif imenu == 'c' or imenu == 'C':
-        print("--Persentase Data Survey--")
+        print("---Persentase Data Survey---")
+        imenu3()
     else:
-        print("--pilihan tidak ada dalam menu--")
+        print(">>pilihan tidak ada dalam menu")
+        
