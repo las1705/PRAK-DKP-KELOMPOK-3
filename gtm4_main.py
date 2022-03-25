@@ -42,8 +42,12 @@ def imenu3():
 
 
 # progam utama
+from gtm4_c1 import *
+lp = 0
 while True:
     print("\n\n=========SURVEY=========")
+    mkr = mthd("DIDID BAYU FARIZQI","LUTHFI ANIS SYAFAR","ADDELLIA DEVIANTI","RIZAL AGATHA ERDIN AGESYAH")
+    print("Survey by: Shift 1, Kelompok 3: \n<> "+mkr.n1+"\n<> "+mkr.n2+"\n<> "+mkr.n3+"\n<> "+mkr.n4)    
     print("-<({[MENU]})>-:")
     print("A. menambah data survey\nB. menampilkan data\nC. melihat persentase")
     imenu = input(">pilih huruf angka dari pilihan menu: ")
@@ -64,4 +68,9 @@ while True:
         imenu3()
     else:
         print(">>pilihan tidak ada dalam menu")
-        
+    
+    if imenu == 'a' or imenu == 'A' or imenu == 'b' or imenu == 'B' or imenu == 'c' or imenu == 'C':
+        lp+=1
+    
+    print("")
+    mkr.selesai(lp)    
