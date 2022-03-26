@@ -7,13 +7,13 @@ pilC = ["osas","kodok","cicak"]
 def imenu1(md, inama):
     if md == 1:
         pilA.insert(len(pilA), inama)
-        print(" <<berhasil menambahkan peserta <"+inama+"> ke dalam data survey")
+        return print(" <<berhasil menambahkan peserta <"+inama+"> ke dalam data survey")
     elif md == 2:
         pilB.insert(len(pilB), inama)
-        print(" <<berhasil menambahkan peserta <"+inama+"> ke dalam data survey")
+        return print(" <<berhasil menambahkan peserta <"+inama+"> ke dalam data survey")
     elif md == 3:
         pilC.insert(len(pilC), inama)
-        print(" <<berhasil menambahkan peserta <"+inama+"> ke dalam survey")
+        return print(" <<berhasil menambahkan peserta <"+inama+"> ke dalam survey")
     else:
         return print(" <<Pilihan ini tidak tersedia")
     
@@ -57,7 +57,7 @@ while True:
         print("---Menambah Data Survey---")
         inama = input(" >masukkan nama anda: ")
         print(" >pilihan untuk didukung:")
-        print("  1. Pilih pro Rusia\n  2. Pilih pro Ukaraina\n  3. Pilih pro")
+        print("  1. Pilih pro Rusia\n  2. Pilih pro Ukaraina\n  3. Netral")
         md = int(input(" <masukkan nomor angka: "))
         imenu1(md, inama) 
     elif imenu == 'b' or imenu == 'B':
